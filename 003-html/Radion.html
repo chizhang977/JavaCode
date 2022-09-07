@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function SelectFruitName() {
+            var s = "";
+            for (let i = 0; i < document.forms.form.length; i++) {
+                if (document.forms.form[i].checked){
+                    alert(document.forms.form[i].value)
+                    return;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+        <input type="radio" value="banana" name="fruit">香蕉<br/>
+        <input type="radio" value="orange" name="fruit" checked>句子<br/>
+        <input type="radio" value="apple" name="fruit">苹果<br/>
+
+        <input type="button" value="选中的水果名称" onclick="SelectFruitName()">
+    </form>
+
+</body>
+</html>

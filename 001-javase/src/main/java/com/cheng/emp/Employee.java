@@ -2,7 +2,7 @@ package com.cheng.emp;
 
 import java.time.LocalDate;
 
-public class Employee extends Person{
+public class Employee extends Person implements Comparable<Employee>{
     private static int nextId = 1;//静态字段
 
     private String name;
@@ -25,6 +25,8 @@ public class Employee extends Person{
     }
     //无参构造
     public Employee(){}
+
+
 
     @Override
     public String getDescription() {
@@ -83,5 +85,10 @@ public class Employee extends Person{
     public static void main(String[] args){
         Employee e = new Employee("Harry",5000);
         System.out.println(e.getName()+" "+e.getSalary());
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return Double.compare(this.salary,o.salary);
     }
 }

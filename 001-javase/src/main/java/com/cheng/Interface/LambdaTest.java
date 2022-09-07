@@ -1,9 +1,16 @@
 package com.cheng.Interface;
 
+import com.cheng.Object.ObjectMethod.Emp;
+import com.cheng.emp.Employee;
+import org.junit.Test;
+
 import javax.swing.*;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Objects;
 
 
 public class LambdaTest {
@@ -25,5 +32,10 @@ public class LambdaTest {
 
         JOptionPane.showMessageDialog(null,"Quit program?");
         System.exit(0);
+    }
+
+    @Test
+    public void  test(){
+
     }
 }
