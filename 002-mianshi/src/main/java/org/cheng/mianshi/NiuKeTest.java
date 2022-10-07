@@ -27,4 +27,31 @@ public class NiuKeTest {
         String str = "";
         System.out.print(str.split(",").length);
     }
+
+    @Test
+    public void test3(){
+
+        int x = 0;
+        int y = 0;
+        int k = 0;
+
+        for (int z = 0; z < 5; z++){
+            if ((++x > 2) && (++y > 2) && (k++ > 2)){
+                x++;
+                ++y;
+                k++;
+            }
+        }
+
+        System.out.println(x+" "+y+" "+k);
+    }
+
+    @Test
+    public void  test4(){
+        String s = "com.jd.".replaceAll(".","/")+"MyClass.class";
+        System.out.println(s);
+
+        String s1 = "com.jd.".replaceAll("\\.","/")+"MyClass.class";
+        System.out.println(s);
+    }
 }
