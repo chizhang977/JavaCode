@@ -1,0 +1,15 @@
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cheng_item
+    username: root
+    password: test
+
+  application:
+    name: user-manager
+
+
+server:
+  port: 8080
