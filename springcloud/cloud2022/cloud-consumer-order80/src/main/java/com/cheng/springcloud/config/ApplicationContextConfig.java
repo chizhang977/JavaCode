@@ -11,7 +11,7 @@ public class ApplicationContextConfig {
 
     @Bean
     //需要自定义策略时，则可以去掉@LoadBalanced
-   //@LoadBalanced //使用@LoadBalanced注解赋予RestTemplate负载均衡的能力
+    @LoadBalanced //使用@LoadBalanced注解赋予RestTemplate负载均衡的能力
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }

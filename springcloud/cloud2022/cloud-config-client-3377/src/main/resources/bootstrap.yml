@@ -1,0 +1,31 @@
+server:
+  port: 3377
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://localhost:3344
+      name: config
+      profile: dev
+      label: master
+  rabbitmq:
+    host: 192.168.200.131
+    port: 5672
+    username: admin
+    password: 123
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: config3377
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
