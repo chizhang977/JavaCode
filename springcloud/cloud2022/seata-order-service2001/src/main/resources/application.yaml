@@ -1,0 +1,32 @@
+server:
+  port: 2001
+
+spring:
+  application:
+    name: seata-order-service    #服务名称 seata-order-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group  #自定义事务名称需要与Seata-server中对应
+    nacos:
+      discovery:
+        server-addr: localhost:8848    #nacos地址
+  datasource:       #数据源
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_order
+    username: root
+    password: root
+
+feign:
+  hystrix:
+    enabled: false
+
+logging:
+  level:
+    io:
+      seata: info
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+
